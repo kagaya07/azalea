@@ -2,4 +2,7 @@
 //コメントのお試し
 /*コメント改行版
 　こんな感じかな*/
-alert("hello world!!");
+var a = 10 ;
+a *= 3 ;
+a+;
+console.log(a);
