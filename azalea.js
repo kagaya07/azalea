@@ -78,12 +78,62 @@ console.log(encode);
 var decode = decodeURIComponent(encode);
 console.log(decode);
 
+//ローカル変数、グローバル変数の確認
+function ff() {
+  fa = "ハロハロ";
+  console.log(fa);
+}
 
+ff();
+console.log(fa);
 
+//関数の定義、呼び出しを同時に行う。
+(function(name) {
+  console.log(name + "さん、こんにちは");
+})("リチェ・アブリル");
 
+//変数に入った値をキーで採りだす。(関数を値として変数に入れるireru)
+var apple = {
+  name: "リンゴ",
+  greet: function(age, from) {
+    console.log( this.name + "です。" );
+    console.log( "生後" + age + "です。" );
+    console.log( "出身地は" + from + "です。" );
+  }
+};
 
+apple.greet();
 
+var practice = {
+  name: "さくらんぼ"
+};
 
+apple.greet.call(practice,"16ヶ月","青森");
+
+//dateオブジェクト、メソッドを使い今日の日にちを表示
+var today = new Date();
+console.log("今日は" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日です。" );
+
+//小数点の表示
+console.log(Math.ceil(1.99));　//切り上げ
+console.log(Math.round(1.22)); //四捨五入
+console.log(Math.floor(1.99)); //切り捨て
+
+//pushを使ったを使った配列の値の追加
+var n = [ 10, 20, 30, 40 ];
+n.push( 50, 60 );
+console.log(n[4]);
+
+var date = "2013年3月31日";
+// (/[0-9]+/g)のパターンに一致するものを探す。
+var result = date.match(/[0-9]+/g);
+//一致したものを出力
+console.log(result);
+
+var message = "This is a pen";
+//isに一致する部分全てをatに変換する。
+var resut = message.replace(/is/g, "at");
+console.log(resut);
 
 
 
