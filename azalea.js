@@ -135,6 +135,31 @@ var message = "This is a pen";
 var resut = message.replace(/is/g, "at");
 console.log(resut);
 
+// htmlのボタンにcheck();という関数を紐付けている。(e)にはhtmlの方でthisが引数として渡されてくる(thisはhtmlの要素自身を表すのでボタン〜が入る)
+function check(e) {
+  console.log(e.value + 'がクリックされました。')
+}
+
+//confirmメソッド
+function checks() {
+  var result = confirm("確認用のメッセージを表示します。");
+  if (result) {
+    console.log("OK")
+  } else {
+    console.log("キャンセル");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
