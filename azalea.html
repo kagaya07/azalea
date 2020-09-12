@@ -4,8 +4,29 @@
 		<meta charset="utf-8">
 		<title>ツツジ</title>
 		<link rel="stylesheet" tepe="text/css" href="azalea.css">
-		<script src="azalea.js"></script>
+		<script src="azalea.js">
+
+    </script>
 	</head>
 	<body>
-	</body>
+    <div class="background">
+      <h1 class="title">Javascriptの練習</h1>
+      <!-- jsのclickイベント(クリックするとおはようございますが表示) -->
+      <button onclick="alert('おはようございます！');" class="hello">挨拶表示</button><br><br>
+      <img src="img/donatu.jpg" class="image-food" onmouseover="console.log('カーソルが乗ったよ！');" onmouseout="console.log('カーソルが外れたよ！');">
+      <input type="text" onfocus="console.log('フォーカスを取得');" onblur="console.log('フォーカスが外れました。');" class="text-box">
+      <select onchange="console.log('項目が変更されました！')" class="food">
+        <option>ごはん</option>
+        <option>お菓子</option>
+        <option>飲み物</option>
+      </select><br><br>
+      <div class="button-box">
+        <input type="button" value="ボタン1" onclick="check(this);" class="button">
+        <input type="button" value="ボタン2" onclick="check(this);" class="button">
+        <input type="button" value="ボタン3" onclick="check(this);" class="button">
+      </div>
+      <button onclick="checks();" onclick="console.log('クリックしました');">クリック</button><br>
+      <p class="option"><a href="javascript:void(0);" onclick="window.open('http://myrecipeshelf.work',);" class="link">MyRecipeShelfはこちら！</a></p>
+      <!--urlのリンク先を別タブor別ウィンドウで表示する-->
+  </body>
 </html>
