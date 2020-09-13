@@ -150,6 +150,29 @@ function checks() {
   }
 }
 
+//タイマー機能
+var count = 0;
+var timer = setInterval(output, 1000);
+function output() {
+  count++;
+  console.log (count + "秒経過");
+  if(count >= 10) {
+    clearInterval(timer);
+  }
+}
+
+//入力
+function inputcheck() {
+  if(document.frml.lastname.value == "") {
+    alert("姓を入力してください");
+  } else if(document.frml.firstname.value == "") {
+    alert("名を入力してください");
+  } else if(!document.frml.gender[0].checked && !document.frml.gender[1].checked) {
+    alert("性別を入力してください");
+  } else{
+    document.frml.submit();
+  }
+}
 
 
 
