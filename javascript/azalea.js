@@ -174,7 +174,20 @@ function inputcheck() {
   }
 }
 
+//idでの要素の取得
+function setValue() {
+  var elm = document.getElementById("txl");
+  elm.value = "Hello!";
+}
 
+//name属性での要素の取得html側のname属性を全て探す。
+function setValues() {
+  var elms =document.getElementsByName("tx");
+  //nameがtxのものが来るたび１ずつindexの値をたし付与する。
+  for (var i = 0; i < elms.length; i++) {
+    elms[i].value = "Hello";
+  }
+}
 
 
 
