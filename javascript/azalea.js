@@ -150,8 +150,44 @@ function checks() {
   }
 }
 
+//タイマー機能
+var count = 0;
+var timer = setInterval(output, 1000);
+function output() {
+  count++;
+  console.log (count + "秒経過");
+  if(count >= 10) {
+    clearInterval(timer);
+  }
+}
 
+//入力
+function inputcheck() {
+  if(document.frml.lastname.value == "") {
+    alert("姓を入力してください");
+  } else if(document.frml.firstname.value == "") {
+    alert("名を入力してください");
+  } else if(!document.frml.gender[0].checked && !document.frml.gender[1].checked) {
+    alert("性別を入力してください");
+  } else{
+    document.frml.submit();
+  }
+}
 
+//idでの要素の取得
+function setValue() {
+  var elm = document.getElementById("txl");
+  elm.value = "Hello!";
+}
+
+//name属性での要素の取得html側のname属性を全て探す。
+function setValues() {
+  var elms =document.getElementsByName("tx");
+  //nameがtxのものが来るたび１ずつindexの値をたし付与する。
+  for (var i = 0; i < elms.length; i++) {
+    elms[i].value = "Hello";
+  }
+}
 
 
 
