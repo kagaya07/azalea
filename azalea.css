@@ -76,4 +76,17 @@
 }
 
 
+/*３ページ目のcss*/
+.active {
+  display: block;
+}
+
+.passive {
+  display: none;
+}
+
+
+
+
+
 

@@ -3,11 +3,29 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="azalea.css">
-    <script src="azalea2.js">
-    </script>
+    <script src="javascript/azalean.js"></script>
     <title>3ページ目</title>
   </head>
   <body>
-    <input type="radio" name="target" value="i" onchenge="showIppan();"
+    <input type="radio" name="target" value="i" onchange="showIppan();" checked>一般用
+    <input type="radio" name="target" value="h" onchange="showHojin();" >法人用
+    <ul id="ippan_area" class="active">
+      <li>氏名<input type="text" name="name"></li>
+      <li>住所<input type="text" name="address"></li>
+      <li>電話番号<input type="text" name="tel"></li>
+    </ul>
+    <ul id="hojin_area" class="passive">
+      <li>会社名<input type="text" name="company"></li>
+      <li>部署名<input type="text" name="busho"></li>
+      <li>担当者名<input type="text" name="tanto"></li>
+      <li>住所<input type="text" name="address"></li>
+      <li>電話番号<input type="text" name="tel"></li>
+      <li>内線番号<input type="text" name="naisen"></li>
+    </ul>
+
+    <button id="btn" >読み込み</button>
+    <div id="imageArea" class="img-food">ここにイメージが読み込まれます。</div><br><br>
+    <button id="call">呼び出す</button>
+    <div id="HeroArea">ここにヒーローを呼び出します！！</div>
   </body>
 </html>
