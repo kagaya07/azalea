@@ -38,4 +38,33 @@ window.onload = function() {
   document.getElementById("btn").onclick = showImage;
 };
 
+$(function() {
+  $("#msg").css("font-size", "40px");
+});
+
+$(function() {
+  $("#parent p").css("color", "#00bfff");
+});
+
+$(function() {
+  $("p ~ a").css("font-size", "30px");
+});
+
+$(function() {
+  var elm = $("#fruits > li");
+  elm.css("background-color", "pink")
+  .filter(":even").css("color", "white");
+});
+
+$(function() {
+  $("input[name='tel']").css("background-color", "#e0ffff");
+});
+
+$(function() {
+  console.log($("div").filter(".item").html());
+  console.log($("div").find(".item").html());
+})
+
+
+
 
