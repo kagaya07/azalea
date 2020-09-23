@@ -84,8 +84,10 @@
 .passive {
   display: none;
 }
-
-
+.turu {
+  width: 200px;
+  height: 150px;
+}
 
 
 

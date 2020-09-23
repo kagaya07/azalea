@@ -63,7 +63,45 @@ $(function() {
 $(function() {
   console.log($("div").filter(".item").html());
   console.log($("div").find(".item").html());
-})
+});
+
+$(function() {
+  $("#msg1").html($("#msg2").html());
+});
+
+$(function() {
+  $("#msg3").val($("#msg4").val());
+});
+
+$(function() {
+  $("img").attr("src", "img/IMG_9731.jpeg");
+});
+
+$(function() {
+  $("input[value='orange']").removeAttr("checked");
+});
+
+$(function() {
+  $("#btn").on("click", sayHello);
+});
+function sayHello() {
+  alert("こんにちはー");
+}
+
+$(function() {
+  $("#btnn").on("click", { name: "とるて" }, sayHello);
+});
+function sayHello(event) {
+  alert(event.data.name + "さん、こんにちは！");
+}
+
+
+
+
+
+
+
+
 
 
 
