@@ -35,7 +35,6 @@ window.onload = function() {
   document.getElementById("call").onclick = function() {
     showhero(1);
   };
-  document.getElementById("btn").onclick = showImage;
 };
 
 $(function() {
@@ -82,9 +81,9 @@ $(function() {
 });
 
 $(function() {
-  $("#btn").on("click", sayHello);
+  $("#btns").on("click", sayello);
 });
-function sayHello() {
+function sayello() {
   alert("こんにちはー");
 }
 
@@ -94,6 +93,10 @@ $(function() {
 function sayHello(event) {
   alert(event.data.name + "さん、こんにちは！");
 }
+
+
+
+
 
 
 
