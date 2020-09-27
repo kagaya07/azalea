@@ -19,7 +19,7 @@ function showHojin() {
 function showImage() {
   var htmlstr = "";
   for(var i=1; i<=3; i++) {
-    htmlstr += "<img src='img/food" + i + ".jpg'>";
+    htmlstr += "<img src='../img/food" + i + ".jpg'>";
   }
   document.getElementById("imageArea").innerHTML = htmlstr;
   //ボタンの無効化処理
@@ -28,14 +28,13 @@ function showImage() {
 
 //ヒーローの写真
 function showhero(number) {
-  var htmlimg = "<img src='img/ti" + number + ".png'>";
+  var htmlimg = "<img src='../img/ti" + number + ".png'>";
   document.getElementById("HeroArea").innerHTML = htmlimg;
 }
 window.onload = function() {
   document.getElementById("call").onclick = function() {
     showhero(1);
   };
-  document.getElementById("btn").onclick = showImage;
 };
 
 $(function() {
@@ -74,7 +73,7 @@ $(function() {
 });
 
 $(function() {
-  $("img").attr("src", "img/IMG_9731.jpeg");
+  $("img").attr("src", "../img/IMG_9731.jpeg");
 });
 
 $(function() {
@@ -82,9 +81,9 @@ $(function() {
 });
 
 $(function() {
-  $("#btn").on("click", sayHello);
+  $("#btns").on("click", sayello);
 });
-function sayHello() {
+function sayello() {
   alert("こんにちはー");
 }
 
@@ -94,6 +93,10 @@ $(function() {
 function sayHello(event) {
   alert(event.data.name + "さん、こんにちは！");
 }
+
+
+
+
 
 
 
